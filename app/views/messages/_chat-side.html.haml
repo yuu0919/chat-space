@@ -1,17 +1,19 @@
-%div.chat-side
-  %div.chat-side__user
-    %div.chat-side__user-content
-      %div.chat-side__user-name
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
         watanabe yuu
-      %a(href='')
-        %i.fa.fa-pencil-square-o
-      %a(href='')
-        %i.fa.fa-cog
+      .chat-side__user--new-group
+        = link_to do
+          %i.fa.fa-pencil-square-o
+      .chat-side__user--edit-user
+        = link_to do
+          %i.fa.fa-cog
 
-  %div.chat-side__groups
-    %div.chat-side__groups-list
-      %div.chat-side__group
-        %div.chat-side__group-name
+  .chat-side__groups
+    .chat-side__groups-list
+      .chat-side__group
+        .chat-side__group-name
           ok
-        %div.chat-side__group-message
-          lo
+        .chat-side__group-message
+          popopo
