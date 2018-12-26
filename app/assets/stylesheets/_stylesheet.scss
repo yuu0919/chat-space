@@ -1,0 +1,56 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.notification {
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-color: $mainsubcolor;
+  text-align: center;
+  color: $mainwhitecolor;
+}
+
+@include chat-side();
+
+.chat-main {
+  position: relative;
+  height: 100vh;
+  width: calc(100vw - 300px);
+
+  @include chat-main__header();
+
+  &__body {
+    padding-left: 300px;
+    height: calc(100% - 15% - 92px);
+    &--message-list {
+      padding-top: 46px;
+      padding-left: 40px;
+
+      .chat-main__message.clearfix {
+        @include clearfix();
+        padding: 20px 0;
+
+        .chat-main__message-name {
+          color: $mainmessagecolor;
+          font-size: 16px;
+          font-weight: bold;
+          float: left;
+        }
+        .chat-main__message-time {
+          color: $mainmessagecolor;
+          font-size: 12px;
+          padding: 0 10px 10px;
+          float: left;
+        }
+      }
+      .chat-main__message-body {
+        color: $mainmessagecolor;
+        font-size: 14px;
+        clear: both;
+      }
+    }
+  }
+  @include chat-main__footer();
+}
