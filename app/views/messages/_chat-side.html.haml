@@ -11,9 +11,10 @@
           = fa_icon 'cog', class: 'fa'
 
   .chat-side__groups
-    .chat-side__groups-list
+    - current_user.groups.each do |group|
       .chat-side__group
-        .chat-side__group-name
-          ok
-        .chat-side__group-message
-          popopo
+        = link_to group_messages_path(group) do
+          .chat-side__group-name
+            = group.name
+          .chat-side__group-message
+            メッセージはまだありません
