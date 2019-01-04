@@ -2,7 +2,7 @@
   .chat-side__user
     .chat-side__user-content
       .chat-side__user-name
-        =
+        = current_user.name
       .chat-side__user--new-group
         = link_to do
           = fa_icon 'pencil-square-o', class: 'fa'
