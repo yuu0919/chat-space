@@ -55,17 +55,16 @@
       overflow: scroll;
       height: 85%;
       width: 100%;
-      .chat-side__groups-list {
-        height: 100%;
+      .chat-side__group {
+        padding: 20px;
         color: #fff;
-        .chat-side__group {
-          padding: 20px;
-          .chat-side__group-name {
-            font-size: 15px;
-          }
-          .chat-side__group-message {
-            font-size: 11px;
-          }
+        .chat-side__group-name {
+          color: #fff;
+          font-size: 15px;
+        }
+        .chat-side__group-message {
+          color: #fff;
+          font-size: 11px;
         }
       }
     }
