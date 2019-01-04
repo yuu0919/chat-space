@@ -13,8 +13,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|
-|image|text|
+|body|string|
+|image|string|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 
