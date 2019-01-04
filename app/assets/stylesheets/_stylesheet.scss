@@ -4,17 +4,12 @@ body {
 }
 
 .notification {
-  display: block;
-  height: 30px;
-  width: 100%;
-  background-color: $mainsubcolor;
-  text-align: center;
-  color: $mainwhitecolor;
 }
 
 @include chat-side();
 
 .chat-main {
+  margin-left: 300px;
   position: relative;
   height: 100vh;
   width: calc(100vw - 300px);
@@ -22,10 +17,13 @@ body {
   @include chat-main__header();
 
   &__body {
-    padding-left: 300px;
-    height: calc(100% - 15% - 92px);
+    position: absolute;
+    top: 15%;
+    overflow: scroll;
+    width: 100%;
+
+    height: calc(100vh - 15% - 92px);
     &--message-list {
-      padding-top: 46px;
       padding-left: 40px;
 
       .chat-main__message.clearfix {
