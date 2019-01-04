@@ -7,31 +7,5 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .notification
-      チャットグループが作成されました
-
-    = render 'messages/chat-side'
-
-    .chat-main
-      .chat-main__header
-        .chat-main__header--group.clearfix
-          .chat-main__header--group-name
-            sampleグループ
-          %a.chat-main__header--group-edit-btn(href='')edit
-        .chat-main__header--members
-          MEMBER
-          %I
-            test
-      .chat-main__body
-        %div.chat-main__body--message-list
-          = render 'messages/message'
-      .chat-main__footer
-        %form.chat-main__footer-form
-          .chat-main__footer-body
-            %input.message{placeholder: "type a message", type: "text"}
-            %label.upload-label{for: "upload-icon"}
-              %i.fa.fa-picture-o
-            %input.submit{value: "Send", type: "submit"}
-
-
+    = render 'layouts/flash'
     = yield
