@@ -52,6 +52,7 @@
     }
 
     .chat-side__groups {
+      overflow: scroll;
       height: 85%;
       width: 100%;
       .chat-side__groups-list {

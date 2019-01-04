@@ -2,13 +2,13 @@
   .chat-side__user
     .chat-side__user-content
       .chat-side__user-name
-        watanabe yuu
+        =
       .chat-side__user--new-group
         = link_to do
-          %i.fa.fa-pencil-square-o
+          = fa_icon 'pencil-square-o', class: 'fa'
       .chat-side__user--edit-user
-        = link_to do
-          %i.fa.fa-cog
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'fa'
 
   .chat-side__groups
     .chat-side__groups-list
