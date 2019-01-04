@@ -1,9 +1,7 @@
-%body
-  .notification
-    = render 'messages/chat-side'
+= render 'messages/chat-side'
 
-    .chat-main
-      = render 'messages/chat-main__header'
-      = render 'messages/message'
-      = render 'messages/chat-main__footer'
+.chat-main
+  = render 'messages/chat-main__header'
+  = render 'messages/message'
+  = render 'messages/chat-main__footer'
   = yield
