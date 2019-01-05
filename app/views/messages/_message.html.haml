@@ -1,10 +1,13 @@
-.chat-main__body
-  %div.chat-main__body--message-list
-    .chat-main__message.clearfix
-      .chat-main__message-name
-        kkkkk
-      .chat-main__message-time
-        2018/12/24/12:12:00
-      .chat-main__message-body
-        testtesttest
-
+%div.chat-main__body--message-list
+  .chat-main__message.clearfix
+    .chat-main__message-name
+      = message.user.name
+    .chat-main__message-time
+      = message.created_at.strftime("%y/%m/%d %H:%M")
+    .chat-main__message-body
+      = message.body
+  .lower-message
+    - if message.body.present?
+      %p.lower-message__content
+        = message.body
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

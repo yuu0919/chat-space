@@ -2,6 +2,7 @@
 
 .chat-main
   = render 'messages/chat-main__header'
-  = render 'messages/message'
+  .chat-main__body
+    = render @messages
   = render 'messages/chat-main__footer'
   = yield

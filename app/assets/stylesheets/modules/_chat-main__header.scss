@@ -1,5 +1,6 @@
 @mixin chat-main__header(){
   .chat-main__header {
+    z-index: 10;
     right: 0;
     width: calc(100% - 302px);
     position: fixed;
