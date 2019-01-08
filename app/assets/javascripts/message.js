@@ -1,27 +1,25 @@
 $(function(){
   function buildHTML(message){
-    var body = `<div class="chat-main__message-name">
-                 ${message.user_name}
-               </div>
-               <div class="chat-main__message-time">
-                 ${message.created_at}
-               </div>
-               <div class="chat-main__message-body">
-                 <p class="lower-message__content">
-                   ${message.body}
-                 </p>`
-    if (message.image) {
+    var body = `<div class="chat-main__body--message-list">
+                  <div class="chat-main__message clearfix">
+                    <div class="chat-main__message-name">
+                       ${message.user_name}
+                     </div>
+                     <div class="chat-main__message-time">
+                       ${message.created_at}
+                     </div>
+                     <div class="chat-main__message-body">
+                       <p class="lower-message__content">
+                         ${message.body}
+                       </p>`
 
-      var html = `<div class="chat-main__body--message-list">
-                    <div class="chat-main__message clearfix">
-                      ${body}
-                        <img class="lower-message__image" src=${message.image}>
+    if (message.image) {
+      var html = `${body}
+                    <img class="lower-message__image" src=${message.image}>
                     </div>
                   </div>`
     } else {
-      var html = `<div class="chat-main__body--message-list">
-                    <div class="chat-main__message clearfix">
-                      ${body}
+      var html = `${body}
                     </div>
                   </div>`
     }
@@ -31,7 +29,6 @@ $(function(){
   $("#form").on('submit', function(e){
     e.preventDefault();
     var formData = new FormData($(this).get()[0]);
-    console.log(formData);
     var href = window.location.href;
     $.ajax({
       url: href,
