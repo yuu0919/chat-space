@@ -42,6 +42,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body').append(html);
       $('#form')[0].reset();
+      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
       alert('error');
@@ -49,6 +50,5 @@ $(function(){
     .always(function(){
       $('#form__submit').removeAttr('disabled');
     });
-    $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
   })
 });
