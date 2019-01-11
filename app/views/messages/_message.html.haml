@@ -1,6 +1,6 @@
-.chat-main__body--message-list
+.chat-main__body--message-list{ "data-id": "#{message.id}" }
   .chat-main__message.clearfix
-    .chat-main__message-name
+    .chat-main__message-name{"data-name": "#{message.user.name}"}
       = message.user.name
     .chat-main__message-time
       = message.created_at.strftime("%y/%m/%d %H:%M")
