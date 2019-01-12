@@ -1,17 +1,19 @@
 $(function(){
+
   function buildHTML(message){
-    var body = `<div class="chat-main__body--message-list">
-                  <div class="chat-main__message clearfix">
-                    <div class="chat-main__message-name">
-                       ${message.user_name}
-                     </div>
-                     <div class="chat-main__message-time">
-                       ${message.created_at}
-                     </div>
-                     <div class="chat-main__message-body">
-                       <p class="lower-message__content">
-                         ${message.body}
-                       </p>`
+
+  var body = `<div class="chat-main__body--message-list" data-id="${message.id}">
+              <div class="chat-main__message clearfix">
+                <div class="chat-main__message-name">
+                   ${message.user_name}
+                 </div>
+                 <div class="chat-main__message-time">
+                   ${message.created_at}
+                 </div>
+                 <div class="chat-main__message-body">
+                   <p class="lower-message__content">
+                     ${message.body}
+                   </p>`
 
     if (message.image) {
       var html = `${body}
@@ -24,7 +26,7 @@ $(function(){
                   </div>`
     }
     return html;
-  }
+  };
 
   $("#form").on('submit', function(e){
     e.preventDefault();
@@ -50,5 +52,5 @@ $(function(){
     .always(function(){
       $('#form__submit').removeAttr('disabled');
     });
-  })
+  });
 });
