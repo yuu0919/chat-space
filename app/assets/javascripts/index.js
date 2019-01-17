@@ -28,7 +28,6 @@ $(function(){
                   </div>`
     search_list.append(message);
   }
-
   function buildHTML(message){
 
   var body = `<div class="chat-main__body--message-list" data-id="${message.id}">
